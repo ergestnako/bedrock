@@ -1365,6 +1365,7 @@ PIPELINE_JS = {
         'source_filenames': (
             'js/base/uitour-lib.js',
             'js/firefox/features-sync.js',
+            'js/firefox/features-sync-init.js',
         ),
         'output_filename': 'js/firefox-features-sync-bundle.js',
     },
