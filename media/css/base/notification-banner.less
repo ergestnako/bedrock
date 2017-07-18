@@ -1,0 +1,139 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../sandstone/lib.less";
+
+/* -------------------------------------------------------------------------- */
+// Notification Banner
+
+
+.notification-banner {
+    #gradient.horizontal(@startColor: #dad9d9, @endColor: #f3f2f2);
+    background-color: #dad9d9;
+
+    .content {
+        .at2x('/media/img/notification/background.png', auto, 100%);
+        .border-box;
+        .clearfix;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        padding: 20px;
+        width: @widthDesktop;
+    }
+
+    h2 {
+        .font-size(48px);
+        color: #000;
+        font-weight: bold;
+        text-shadow: none;
+    }
+
+    p {
+        .font-size(24px);
+        color: #000;
+        font-style: italic;
+    }
+
+    .content-container {
+        float: left;
+        width: 65%;
+    }
+
+    .notification-banner-confirm {
+        background: #0e9ad8;
+        color: #fff;
+        display: inline-block;
+        padding: .5em 36px;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            .transition(background-color .1s ease-in-out);
+            background-color: lighten(#0e9ad8, 5%);
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .notification-banner-close {
+        .font-size(16px);
+        .image-replaced;
+        .transition(opacity .2s ease-in-out);
+        background: #000 url('/media/img/notification/close.svg') center center no-repeat;
+        .background-size(12px 12px);
+        border-radius: 100%;
+        border: none;
+        float: right;
+        height: 30px;
+        margin-top: -20px;
+        opacity: 0.6;
+        width: 30px;
+
+        &:hover,
+        &:focus {
+            .transition(opacity .2s ease-in-out);
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (min-width: @breakDesktopWide) {
+        .content {
+            width: @widthDesktopWide;
+        }
+    }
+
+    @media only screen and (min-width: @breakDesktop) {
+        .content {
+            padding: 40px 20px;
+        }
+    }
+
+    @media only screen and (max-width: @breakDesktop) {
+        .content {
+            width: @widthTablet;
+        }
+
+        h2 {
+            .font-size(36px);
+        }
+
+        p {
+            .font-size(18px);
+        }
+
+        .notification-banner-close {
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (max-width: @breakTablet) {
+        .content {
+            width: auto;
+        }
+
+        h2 {
+            .font-size(24px);
+        }
+
+        p {
+            .font-size(16px);
+        }
+    }
+
+    @media only screen and (max-width: @breakMobileLandscape) {
+        .content {
+            background-position: top left;
+        }
+
+        .content-container {
+            width: 80%;
+        }
+    }
+}
