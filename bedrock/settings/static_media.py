@@ -844,9 +844,7 @@ PIPELINE_CSS = {
     },
     'plugincheck': {
         'source_filenames': (
-            'css/base/mozilla-accordion.less',
-            'css/plugincheck/plugincheck.less',
-            'css/newsletter/fxnewsletter-subscribe.less',
+            'css/plugincheck/plugincheck.scss',
         ),
         'output_filename': 'css/plugincheck-bundle.css',
     },
@@ -1671,14 +1669,7 @@ PIPELINE_JS = {
     },
     'plugincheck': {
         'source_filenames': (
-            'js/libs/mustache.js',
-            'js/base/mozilla-accordion.js',
-            'js/base/mozilla-accordion-gatrack.js',
-            'js/plugincheck/tmpl/plugincheck.ui.tmpl.js',
-            'js/plugincheck/lib/utils.js',
-            'js/plugincheck/lib/version-compare.js',
-            'js/plugincheck/lib/plugincheck.js',
-            'js/plugincheck/check-plugins.js',
+            'js/mozorg/plugincheck.js',
         ),
         'output_filename': 'js/plugincheck-bundle.js',
     },
